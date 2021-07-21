@@ -53,10 +53,10 @@ function addTodo() {
 }
 
 function render() {
-  // clear the list
+  
   todo.innerHTML = null;
 
-  // get the todo list from localstorage
+  
   const todos = localStorage.getItem("todos");
   todoList = JSON.parse(todos) || [];
 
@@ -64,7 +64,7 @@ function render() {
 
     const item = document.createElement("li");
 
-    // create checkbox to update completed state
+    //  checkbox 
     const checkbox = document.createElement("input");
 
     checkbox.type = "checkbox";
@@ -86,11 +86,11 @@ function render() {
 
     });
 
-    // create text node
+    
     const text = document.createElement("p");
     text.innerText = todoList[i].text;
 
-    // create delete button
+    // delete button
     const button = document.createElement("button");
     button.innerText = "X";
     button.addEventListener("click", function () {
